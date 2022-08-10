@@ -60,12 +60,4 @@ We used Randomized Search CV to loop over a set of random values for the paramet
 
 ### Findings and Conclusion
 
-1. Developers should aim to keep the apps optimally sized (between 2 MB to 40 MB) to increase the likelihood of it being popular.
-2. Paid apps designed to fulfil specific functions tend to be small sized and are more likely to meet user expectations.
-3. Majority of the apps should be free. For apps with no ads, apps can be priced under $10.
-4. Free apps tend to outperform paid apps both in volume, install counts and ratings.
-5. There is a positive correlation between installs and ratings
-6. The category (Game) is a potential unsaturated space for app developers. Apps in this category tend to have high installs.
-7. Highly installed apps such as Communication, Productivity & Photography are not as highly rated indicating dissatisfaction among customers and potential untapped market segments.
-8. For paid apps, users review harshly.
-9. Basic sentiment analysis revealed some common issues like loading time and inconvenience with apps may contribute to a negative rating. Usability was one of the main reasons apps were rating positive.
+The comparison of the three proposed methods are shown in Table I. Among the three mothods, KNN with K = 15 has the best accuracy against the other two, and Decision Tree method had the worst performance. Hence, to do such rating prediction on Google Play apps, SVR and KNN algorithm is more acceptable. With the trained model, we can predict the rating when a app is given with the corresponding features, so that improve the user experience when surfing the Apps market and provide a early evaluation for developing the potential products.
