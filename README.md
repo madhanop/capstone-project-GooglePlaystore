@@ -1,5 +1,5 @@
 # capstone-project-GooglePlaystore
-# How to Develop a Popular App?
+
 ## Google Play Store Analysis and Popularity Prediction
 ![playstore](https://user-images.githubusercontent.com/44115595/72658488-4df4c600-3977-11ea-8fc7-263d2884c4e7.png)
 
