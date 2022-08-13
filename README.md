@@ -39,12 +39,9 @@ The rating distribution revealed that most apps perform reasonably well with an 
 #### Basic Sentiment Analysis â€“ User Reviews
 We plotted the fraction of positive, negative and neutral reviews for each category and observed that the Health and Fitness apps perform the best with more than 85% positive reviews. On the other hand, Game and Social apps have a higher fraction of negative reviews. We compared the reviews between free and paid apps and found that people are harsher towards free apps whereas users are more tolerant when they are paying for it.
 
-#### Frequency of Words in Reviews
-We created a word cloud of commonly occurring words in positive and negative reviews and found that the words â€“ â€œloveâ€, â€œgreatâ€ and â€œgoodâ€ were the most commonly occurring words in the positive reviews. On the other hand, the negative words that were prevalent were â€œbadâ€, â€œhateâ€ and â€œadsâ€.
-Our aim was to analyse the reviews and get a better idea of the common issues that people face with apps or the attributes that make an app popular. We extracted phrases from the reviews and observed that positive reviews had phrases like â€œuser friendlyâ€, â€œfree versionâ€, â€œworks greatâ€ and â€œhighly recommendâ€. The negative reviews contained phrases like â€œwaste timeâ€, â€œmany adsâ€, â€œspend moneyâ€ and â€œtakes foreverâ€. We can see that loading time and ads were one of the main concerns amongst users. On the other hand, usability is one of the reasons that users give positive reviews.
 
 ### Predictive Modelling
-We proceeded to predict the popularity of app based on its features and chose the install count as the measure of popularity. We split the number of installs into four buckets â€“ Not so popular, Intermediate Popular, Popular and Extremely Popular, so that we have a classification problem at hand.
+We proceeded to predict the popularity of app based on its features and chose the install count as the measure of popularity. We split the number of installs into four buckets have a classification problem at hand.
 
 #### Feature Selection
 We plotted a Pearson Correlation Matrix which showed a moderate positive correlation exists between the number of reviews and the number of installs. Our initial analysis also revealed that the size of the app affects the rating. Most of the top-rated apps were sized between 2 Mb and 40 Mb. Intuitively, the number of reviews and size of the app would explain the
@@ -52,12 +49,11 @@ majority of the popularity of the app. The rating distribution showed that categ
 
 #### Implementation
 We implemented three classification models to predict the popularity of the app, amongst which Random Forest with tuning gave us the best accuracy with 81.08 % accuracy.
-Logistic Regression â€“ 58.67% accuracy
-Decision Tree Classifier â€“ 76.10% accuracy
-Random Forest Classifier â€“ 78.16% accuracy
-Random Forest with Hyperparameter tuning - 81.08% accuracy
-We used Randomized Search CV to loop over a set of random values for the parameters of the model. We ran the grid search and chose the optimal number of tress, number of features at each split, maximum number of levels and the method of selecting samples. Using these parameters, we predicted the popularity of the app on our test set and obtained an accuracy of 88.05%.
+Logistic Regression â€“ 22.6% accuracy
+Decision Tree Classifier â€“ 51.7% accuracy
+Random Forest Classifier â€“ 56.3% accuracy
+We used Randomized Search CV to loop over a set of random values for the parameters of the model. We ran the grid search and chose the optimal number of tress, number of features at each split, maximum number of levels and the method of selecting samples. Using these parameters, we predicted the popularity of the app on our test set and obtained an accuracy of 56.3%.
 
 ### Findings and Conclusion
 
-The comparison of the three proposed methods are shown in Table I. Among the three mothods, KNN with K = 15 has the best accuracy against the other two, and Decision Tree method had the worst performance. Hence, to do such rating prediction on Google Play apps, SVR and KNN algorithm is more acceptable. With the trained model, we can predict the rating when a app is given with the corresponding features, so that improve the user experience when surfing the Apps market and provide a early evaluation for developing the potential products.
+The comparison of the three proposed methods are shown in Table I. Among the three mothods, KNN with K = 41 has the best accuracy against the other two, and Decision Tree method had the worst performance. Hence, to do such rating prediction on Google Play apps, SVR and KNN algorithm is more acceptable. With the trained model, we can predict the rating when a app is given with the corresponding features, so that improve the user experience when surfing the Apps market and provide a early evaluation for developing the potential products.
